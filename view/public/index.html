@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="lab3.css">
+    
+    <title>Lab3</title>
+   
+  </head>
+  
+  <body onload="onloading()">
+    
+    
+        
+  
+
+    <div id="container">
+        
+<!--  -->
+      <div id="innerContainer">
+
+          <div>
+              <p id="win" class="font"></p>
+          </div> 
+
+        <div class="row">
+            <div class="col-sm left-log">
+                <p class="font">Enter your name</p>
+                <br>
+                <input type="text" id="userName" placeholder="name" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                <br>
+                <input type="password" id="passWord" placeholder="password" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                <p id="signin" class="font"></p>
+                <p id="oldscore" class="font"></p>
+                <p id="pas" class="font"></p>
+                <br>
+                <button type="button" id ="in" class="btn btn-danger" onclick="submitName()">Login</button>
+                <button type="button" id ="re" class="btn btn-danger" onclick="submitName()">Rigster</button>
+                <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+              </div>
+
+              <!--   -->
+          <div class="col-lg col-center">
+        <div>
+          <p class="font">You got <span id="lives">7</span> Guesses left!
+           </p>
+        </div>
+        <div>
+            <p class="font">Hint: <br>[<span id="wordDef"></span>]</p>
+          </div>
+        <div>
+          <p id="clearunder" class="font">Word: [ <span id="wordToGuess"></span> ] </p>
+        </div>
+        <div>
+          <p class="font">Score: [ <span id="userScore">0</span> ] </p>
+        </div>
+        <br>
+          <button type="button" class="btn btn-danger" onclick="onloading()">Restart</button>
+          <button type="button" class="btn btn-danger" onclick="saveUserScore()">Submit</button>
+        <br>
+        <div id="btnContainer"></div>
+        
+      </div>
+       
+              
+              <!--  -->
+              <div class="col-sm right-score">
+                  <p class="font">Score board</p>
+                  <div id="scoreList">
+                    <ul class="list-group">
+                      <li class="list-group-item" id="no0">No record</li>
+                      <li class="list-group-item" id="no1">No record</li>
+                      <li class="list-group-item" id="no2">No record</li>
+                      <li class="list-group-item" id="no3">No record</li>
+                      <li class="list-group-item" id="no4">No record</li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+       </div>
+       
+<!--  -->
+        
+
+      </div> 
+
+         
+
+      <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+      <script>
+          // Initialize Firebase
+          var config = {
+              apiKey: "AIzaSyC4Bn_ybjjq9bXvmVpuX4oR-UIyx0ljidc",
+              authDomain: "quizcreate-8ae32.firebaseapp.com",
+              databaseURL: "https://quizcreate-8ae32.firebaseio.com",
+              projectId: "quizcreate-8ae32",
+              storageBucket: "quizcreate-8ae32.appspot.com",
+              messagingSenderId: "654271086363"
+          };
+          firebase.initializeApp(config);
+      </script>
+  </body>
+        <script src="model.js"></script>
+        <script src="controller.js"></script>
+        <script src="saveController.js"></script>
+
+
+</html>

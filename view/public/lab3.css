@@ -1,0 +1,54 @@
+#container{
+    width: 85%;
+    margin:10% auto;
+    padding-top: 5px;
+}
+
+.left-log{
+ 
+    text-align: center;
+    border-right: 1px dashed black;
+}
+
+.list-group-item{
+    
+    border-bottom: 2px solid black;
+}
+
+.right-score{
+  
+    text-align: center;
+    border-left: 1px dashed black;
+}
+
+
+#innerContainer{
+    background-color: antiquewhite;
+    padding:10px;
+    border-radius: 35px;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.font{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+#lives{
+    color:red;
+   
+}
+
+.btn{
+    margin:2px;;
+    padding:15px;
+}
+
+.btn:hover {
+    background:lightcoral;
+    transform: scale(1.5); 
+}
